@@ -1,16 +1,9 @@
 #!/usr/bin/node
 
-const request = require('request');
+const request = require('request')
 
-// Get the URL from the command line arguments
-const url = process.argv[2];
-
-// Make a GET request
-request(url, (error, response) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(`code: ${response.statusCode}`);
-  }
-});
-
+request(process.argv[2], function (error, response) {
+	  if (response) {
+		      console.log('code:', response.statusCode)
+		    }
+})
