@@ -1,13 +1,7 @@
-const fs = require('fs');
+#!/usr/bin/node
 
-// Get arguments from command line
-const filePath = process.argv[2];
-const content = process.argv[3];
+const fs = require('fs')
 
-// Write to the file using UTF-8 encoding
-fs.writeFile(filePath, content, 'utf8', (err) => {
-  if (err) {
-    console.log(err);
-  }
-});
-
+fs.writeFile(process.argv[2], process.argv[3], 'utf-8', function (err) {
+	  if (err) console.log(err)
+})
