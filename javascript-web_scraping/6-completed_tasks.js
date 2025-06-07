@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const request = require('request');
 
 // Get the API URL from the command line arguments
