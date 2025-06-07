@@ -1,16 +1,12 @@
-const request = require('request');
+#!/usr/bin/node
 
-// Get the movie ID from the command line
-const movieId = process.argv[2];
-const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+const request = require('request')
 
-// Make GET request to the API
-request(url, (error, response, body) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2]
 
-  const data = JSON.parse(body);
-  console.log(data.titl
-
+request(url, function (error, response, body) {
+	  if (!error) {
+		      const data = JSON.parse(body)
+		      console.log(data.title)
+		    }
+})
