@@ -1,3 +1,4 @@
+ #!/usr/bin/node
 const fs = require('fs');
 
 // Get the file path from command line arguments
